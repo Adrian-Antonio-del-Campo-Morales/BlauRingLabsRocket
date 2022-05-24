@@ -10,6 +10,8 @@
 
 #include "rocket.h"
 
+namespace ROCKET
+{
     /**
      * @class
      * This class adds the two print functions to the base Rocket
@@ -23,5 +25,7 @@
     virtual void printTheRocket() = 0;
     virtual void printTheRocketUpsideDown() = 0;
   };
+
+} // namespace ROCKET
 
 #endif // _PRINTABLEROCKET

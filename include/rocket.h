@@ -11,37 +11,56 @@
 #include <vector>
 #include <string>
 
-/**
- * @class
- * This class creates and stores the rocket.
- * The number of lines of the rocket is only set during construction
- */
-class Rocket
+namespace ROCKET
 {
-public:
-    Rocket(int numberOfLines);
-    ~Rocket() = default;
-
-    std::vector<std::string> *getRocket();
-
-private:
-    int _numberOfLines;
 
     /**
      * @brief
-     * This member function orderly builds the rocket using the other member functions.
+     * Characters used for the different rocket parts.
      */
-    void buildTheRocket();
-
-    void buildTheTip();
-    void buildTheBody();
-    void buildTheFeet();
+    static const char EMPTY_CHAR = ' ';
+    static const char TIP_CHAR = '|';
+    static const char BODY_CHAR = 'X';
+    static const char FEET_CHAR = 'X';
 
     /**
-     * @brief
-     * This variable stores the lines of the rocket
+     * @class
+     * This class creates and stores the rocket.
+     * The number of lines of the rocket is only set during construction
      */
-    std::vector<std::string> _theRocket{};
-};
+    class Rocket
+    {
+    public:
+        Rocket(int numberOfLines);
+        ~Rocket() = default;
+
+        std::vector<std::string> *getRocket();
+
+    private:
+        int _numberOfLines;
+
+        /**
+         * @brief
+         * This member function orderly builds the rocket using the other member functions.
+         *
+         * @param[in] N/A
+         * @param[out] N/A
+         * @return N/A
+         * @exception None
+         */
+        void buildTheRocket();
+
+        void buildTheTip();
+        void buildTheBody();
+        void buildTheFeet();
+
+        /*
+         * @brief
+         * This variable stores the lines of the rocket
+         */
+        std::vector<std::string> _theRocket{};
+    };
+
+} // namespace ROCKET
 
 #endif // _ROCKET

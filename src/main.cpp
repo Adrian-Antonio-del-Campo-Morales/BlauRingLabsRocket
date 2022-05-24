@@ -4,11 +4,11 @@
 
 int main(void)
 {
-  PrintableRocketCOUT aPRCOUT(5);
-  aPRCOUT.printTheRocket();
+  ROCKET::PrintableRocketCOUT aPRCOUT(5);
+  aPRCOUT.printTheRocketUpsideDown();
 
-  PrintableRocketCOUT aPRPRINTF(5);
-  aPRPRINTF.printTheRocket();
+  ROCKET::PrintableRocketCOUT aPRPRINTF(5);
+  aPRPRINTF.printTheRocketUpsideDown();
 
   return 0;
 }
