@@ -1,18 +1,14 @@
 #include <iostream>
 #include "printableRocketCOUT.cpp"
+#include "printableRocketPRINTF.cpp"
 
 int main(void)
 {
-  std::cout << "Blau Ring Labs rules!" << std::endl;
+  PrintableRocketCOUT aPRCOUT(5);
+  aPRCOUT.printTheRocket();
 
-  PrintableRocketCOUT aPRCOUT3(3);
-  aPRCOUT3.printTheRocket();
-
-  PrintableRocketCOUT aPRCOUT5(5);
-  aPRCOUT5.printTheRocket();
-
-  PrintableRocketCOUT aPRCOUT10(10);
-  aPRCOUT10.printTheRocket();
+  PrintableRocketCOUT aPRPRINTF(5);
+  aPRPRINTF.printTheRocket();
 
   return 0;
 }
